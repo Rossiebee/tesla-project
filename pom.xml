@@ -101,7 +101,7 @@
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
-	      <name>Landmark Technologies Snapshot Nexus Repository </name>
+	      <name>Landmark Technologies Snapshot Nexus Repository</name>
 	      <url>http://3.137.181.18:8181/Rosie/repository/tesla-project-snapshots/</url>
 	    </snapshotRepository>
 	    
