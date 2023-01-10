@@ -6,8 +6,8 @@ pipeline{
   stages {
     stage('1GetCode'){
       steps{
-        sh "echo 'cloning the latest application version' "
-        git branch: 'feature', credentialsId: 'gitHubCredentials', url: 'https://github.com/LandmakTechnology/maven-web-application'
+        sh "echo 'cloning the latest application version'"
+        git branch: 'master', credentialsId: 'gitHub Credentials', url: 'https://github.com/Rossiebee/tesla-project'
       }
     }
     stage('3Test+Build'){
@@ -31,7 +31,7 @@ pipeline{
     } 
     stage('8deploy2prod'){
       steps{
-        deploy adapters: [tomcat8(credentialsId: 'tomcat-credentials', path: '', url: 'http://35.170.249.131:8080/')], contextPath: null, war: 'target/*war'
+        deploy adapters: [tomcat9(credentialsId: 'tomcat-credentials', path: '', url: 'http://3.144.236.27:8177/')], contextPath: null, war: 'target/*war'
       }
     }
 }
